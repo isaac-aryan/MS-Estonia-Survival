@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS Estonia</title>
+</head>
+
+<body>
+
+    <body>
+
+    <div style="color:rgb(204, 204, 219)">
+        <form action="{{ url_for('predict')}}" method="post">
+
+            <h2>Predictive Analysis: Would You Survive The MS Estonia Disaster?</h2>
+
+            <h3>What Country Did You Board MS Estonia From?</h3><br>
+            <select name="Country" id="country" required="required">
+
+                <option value="Belarus">Belarus</option>
+                <option value="Canada">Canada</option>
+                <option value="Denmark">Denmark</option>
+                <option value="Estonia">Estonia</option>
+                <option value="Finland">Finland</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="Great Britain">Great Britain</option>
+                <option value="Latvia">Latvia</option>
+                <option value="Lithuania">Lithuania</option>
+                <option value="Morocco">Morocco</option>
+                <option value="Netherlands">Netherlands</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Norway">Norway</option>
+                <option value="Russia">Russia</option>
+                <option value="Sweden">Sweden</option>
+
+            </select>
+
+            # Sex
+
+            <h3>What Is Your Sex?</h3><br>
+            <select name="Sex" id="sex" required="required">
+
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+
+            </select>
+            
+
+            <h3>Enter Your Age: </h3><br>
+            <input name="Age" id="age" required="required">
+
+            <h3>Why Were You On The Ship?</h3><br>
+            <select name="Category" id="category" required="required">
+
+                <option value="C">Crew Member</option>
+                <option value="P">Passenger</option>
+
+            </select>
+
+            <br><br><button id="sub" type="submit ">Sink The Ship!</button>
+            <br>
+            <br>
+            <a href="https://www.kaggle.com/aryanbhobe">My Kaggle Profile</a>
+            <br>
+            <a href="https://github.com/isaac-aryan">My GitHub Profile</a>  
+            <br>
+            
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        a:link {
+            color: rgb(129, 216, 231); 
+            background-color: transparent; 
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: rgb(226, 122, 122);
+            background-color: transparent;
+            text-decoration: none;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+
+    </style>
+</body>
+
+</html>
